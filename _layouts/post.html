@@ -1,0 +1,27 @@
+---
+layout: base
+---
+
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <article>
+                <header class="text-center">
+                    <h1>{{ page.title }}</h1>
+                    <p class="lead">{{ page.short }}</p>
+                    <p class="text-muted">{{ page.date | date: "%B %d, %Y" }}</p>
+                </header>
+                <div class="col-12 col-md-6 mx-auto">
+                    <div class="d-flex justify-content-center mb-3">
+                        <img src="{{ site.baseurl }}{{ page.image }}" class="img-fluid" alt="Image">
+                    </div>
+                </div>
+                <div class="post-content text-center">
+                    <div class="col-12" style="text-align: justify;">
+                        {{ content }}
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>

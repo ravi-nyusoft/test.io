@@ -1,0 +1,28 @@
+collections:
+  navigation:
+    output: true
+  people:
+    output: true
+  jobs:
+    output: true
+    permalink: /jobs/:name/
+  use_cases:
+    output: true
+  quotes:
+    output: true
+
+# Permalink structure for _posts
+permalink: /news/:name/
+
+baseurl: ""
+
+timezone: Europe/Zurich
+
+exclude:
+  - node_modules
+  - .git
+  - /netfabric_site.zip
+  - /README.md
+
+google_analytics_tag_id: G-61H18LPX39
+google_tag_manager_container_id: GTM-WBM46568

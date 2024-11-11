@@ -1,0 +1,47 @@
+<div id="snackbar" class="snackbar" style="background-color: #ededed; padding: 5px 0px;">
+  <div class="container d-flex justify-content-center align-items-center text-center">
+    <span>💡 Help Shape the Future of Network Observability: <a href="https://form.jotform.com/242594682680063" target="_blank" style="font-weight: bold; color: #3366FF">Take Our Survey</a></span>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-4 sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="{{ site.baseurl }}/">
+      <img src="{{ site.baseurl }}/assets/images/icons/netfabric-logo-horizontal-full-color-rgb.svg" alt="NetFabric Logo" height="40">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        {% for item in site.data.navigation %}
+          {% if item.subtitles %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown{{ forloop.index }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ item.meta_title }}
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown{{ forloop.index }}">
+                {% for subtitle in item.subtitles %}
+                  <li><a class="dropdown-item" href="{{ site.baseurl }}/{{ subtitle.url }}">{{ subtitle.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ site.baseurl }}/{{ item.url }}">{{ item.meta_title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+
+        <!-- Some space -->
+        <div style="margin-right: 15px;"></div>
+
+        <!-- Contact us button -->
+        <li class="nav-item">
+          <a id="btn-header-keep-me-updated" class="btn btn-primary btn-styled" href="{{ site.baseurl }}/contact" role="button">Keep me updated</a>
+        </li>        
+        
+      </ul>
+    </div>
+  </div>
+</nav>

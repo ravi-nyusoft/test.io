@@ -1,0 +1,280 @@
+/*************/
+/* SCROLLBAR */
+/*************/
+
+/* ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+html {
+  overflow-y: scroll;
+} */
+
+/***********/
+/* SPACING */
+/***********/
+
+.cards-group {
+  margin-top: 2rem;
+}
+
+.contact-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+/**********/
+/* FOOTER */
+/**********/
+
+.footer {
+  background: linear-gradient(to right, #090446ff, #3366ffff);
+  transition: background-color 0.5s ease; /* Transition effect */
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer a:hover,
+.footer a:focus {
+  color: inherit; /* Ensure color does not change on hover or focus */
+  text-decoration: none; /* Ensure no underline on hover or focus */
+}
+
+
+/*************/
+/* ALIGNMENT */
+/*************/
+
+@media (min-width: 768px) {
+  .col-md-1-5 {
+    flex: 0 0 auto;
+    width: 12.5%;
+  }
+
+  .col-md-10-5 {
+    flex: 0 0 auto;
+    width: 87.5%;
+  }
+}
+
+/***********/
+/* BUTTONS */
+/***********/
+
+.btn-styled {
+  background: linear-gradient(to right, rgb(45, 36, 146), #3366ffff);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.btn-styled:hover {
+  background: linear-gradient(to right, rgb(45, 36, 146), rgb(109, 145, 255));
+}
+
+.btn {
+  border-radius: 20px !important;
+}
+
+/*********/
+/* FONTS */
+/*********/
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Apply the Montserrat font to the entire body */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*************/
+/* SEPARATOR */
+/*************/
+
+.dots-separator {
+  width: 50%;
+  margin: 3rem auto;
+  height: 20px; /* Height of the dots */
+  background-image: radial-gradient(black 5%, transparent 0%);
+  background-size: 20px 30px; /* Size of the dots */
+  /*background-position: center;*/
+  border: none; /* Remove default line */
+  opacity: 1;
+}
+
+/**********/
+/* STYLES */
+/**********/
+
+h1 {
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+h2 strong {
+  color: #3366ff;
+}
+
+.title-sentence {
+  text-align: center;
+}
+
+.title-sentence strong {
+  color: #3366ff;
+}
+
+h3 {
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #3366ff;
+  text-underline-offset: 5px;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+/*********/
+/* Media */
+/*********/
+
+.favicon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: #fff;
+  margin-right: 10px; /* Adjust spacing between circles */
+}
+
+.favicon-circle i {
+  font-size: 24px; /* Adjust icon size */
+}
+
+/***********/
+/* COOKIES */
+/***********/
+
+#cookie-notice {
+  padding: 0.5rem 1rem;
+  display: none;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #222;
+  color: rgba(255,255,255,0.8);
+}
+#cookie-notice a {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+#cookie-notice-accept {
+  background-color: #007bff; /* Bootstrap primary button color */
+  color: #fff;
+}
+#cookie-notice-essential {
+  background-color: transparent;
+  border: 1px solid #007bff; /* Bootstrap outline primary button border color */
+  color: #fff;
+}
+#cookie-notice-essential:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+#cookie-notice .btn-link {
+  color: rgba(255,255,255,0.8);
+}
+#cookie-notice .btn-link:hover {
+  color: #fff;
+}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+  #cookie-notice span {
+      display: block;
+      padding-top: 3px;
+      margin-bottom: 1rem;
+  }
+  #cookie-notice a {
+      position: relative;
+      bottom: 4px;
+  }
+}
+
+/**********/
+/* IMAGES */
+/**********/
+
+.grayscale-on-hover {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.grayscale-on-hover:hover {
+  filter: none;
+}
+
+/*********/
+/* LINKS */
+/*********/
+
+.no-link-style {
+  color: inherit; /* Inherit the color from the parent element */
+  text-decoration: none; /* Remove underline */
+}
+
+.no-link-style:hover,
+.no-link-style:focus {
+  color: inherit; /* Ensure color does not change on hover or focus */
+  text-decoration: none; /* Ensure no underline on hover or focus */
+}
